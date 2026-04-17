@@ -1,65 +1,66 @@
+# Use ANSI styling for project title
 print("\033[0;30;45m == BASIC CALCULATOR == \033[0m")
 
-# Membuat Fungsi untuk Cek Koma
-def input_angka(pesan):
+# Create function to check for decimal points
+def input_number(prompt):
     while True:
-        nilai = input(pesan)
+        value = input(prompt)
 
-        #Cek Jika Pakai Koma
-        if "," in nilai:
-            print("⚠️ Gunakan Titik (.) buka Koma (,)")
+        # Check for decimal/comma usage
+        if "," in value:
+            print("⚠️ Use a dot (.) instead of a comma (,)")
             continue
         try:
-            return float(nilai)
+            return float(value)
         except ValueError:
-            print("\033[2;34;40m Input Harus Angka! \033[0m")
+            print("\033[2;34;40m Input must be a number! \033[0m")
 
-# List Operator
-operator = None
-while operator != 0:
-    print("\n Pilih Operator ")
-    print("1. ➕ Tambah")
-    print("2. ➖ Kurang")
-    print("3. ✖ Kali")
-    print("4. ➗ Bagi")
-    print("0. Keluar")
+# Operator List
+operator_choice = None
+while operator_choice != 0:
+    print("\n Select Operator ")
+    print("1. ➕ Addition")
+    print("2. ➖ Substraction")
+    print("3. ✖ Multiplication")
+    print("4. ➗ Division")
+    print("0. Exit")
 
-    # Memilih Operator
+    # Select an operator
     try:
-        operator = int(input("Input Menu (1/2/3/4/0) : "))
+        operator_choice = int(input("Select Operator (1/2/3/4/0) : "))
     except ValueError:
-        print("\033[2;34;40m Input Harus Angka! \033[0m")
+        print("\033[2;34;40m Input must be a number! \033[0m")
         continue
 
-    if operator == 0:
-        print("\n 🤝 Terimakasih")
+    if operator_choice == 0:
+        print("\n 🤝 Thank You")
         break
-    elif operator not in [1, 2, 3, 4]:
-        print("\033[2;34;40m Menu tidak ada. Silakan coba lagi \033[0m")
+    elif operator_choice not in [1, 2, 3, 4]:
+        print("\033[2;34;40m Operator not found. Please try again! \033[0m")
         continue
 
     # Input
-    A1 = input_angka("Masukkan Angka Pertama : ")
-    A2 = input_angka("Masukkan Angka Kedua : ")
+    A1 = input_number("Enter first number : ")
+    A2 = input_number("Enter second number : ")
 
-    #Logika Perhitungan
-    if operator == 1:
-        hasil = A1 + A2
-        operator = "+"
-    elif operator == 2:
-        hasil = A1 - A2
-        operator = "-"
-    elif operator == 3:
-        hasil = A1 * A2
-        operator = "x"
-    elif operator == 4:
+    # Calculation logic
+    if operator_choice == 1:
+        result = A1 + A2
+        symbol = "+"
+    elif operator_choice == 2:
+        result = A1 - A2
+        symbol = "-"
+    elif operator_choice == 3:
+        result = A1 * A2
+        symbol = "x"
+    elif operator_choice == 4:
         if A2 != 0:
-            hasil = A1 / A2
-            operator = "/"
+            result = A1 / A2
+            symbol = "/"
         else:
-            hasil = "Tak Terhingga"
-            operator = "/"
+            result = "Undefined (Division by Zero)"
+            symbol = "/"
 
-    #Hasil
-    print("\n", "="*8, "HASIL", "="*8)
-    print(f"{A1} {operator} {A2} = {hasil}")
+    # Resukt
+    print("\n", "="*8, "RESULT", "="*8)
+    print(f"{A1} {symbol} {A2} = {result}")
