@@ -1,36 +1,36 @@
 # 🧮 Basic Calculator (Python CLI)
 
-Program kalkulator sederhana berbasis **Python (Command Line Interface)** untuk melakukan operasi matematika dasar seperti penjumlahan, pengurangan, perkalian, dan pembagian.
+A simple **Python-based Command Line Interface (CLI)** calculator program to perform basic mathematical operations such as addition, subtraction, multiplication, and division.
 
 ---
 
-## 📌 Fitur
+## 📌 Features
 
-* Input 2 angka
-* Menu pilihan operator:
-  * ➕ Penjumlahan
-  * ➖ Pengurangan
-  * ✖ Perkalian
-  * ➗ Pembagian
-* Validasi input (hanya menerima angka)
-* Penanganan error:
-  * Input tidak valid
-  * Pembagian dengan nol
-* Looping program (tidak perlu restart)
-* Tampilan CLI dengan warna (ANSI escape code)
+* Input 2 numbers
+* Operator selection menu:
+  * ➕ Addition
+  * ➖ Subtraction
+  * ✖ Multiplication
+  * ➗ Division
+* Input validation (accepts numbers only)
+* Error handling:
+  * Invalid input detection
+  * Division by zero handling
+* Program looping (no need to restart)
+* Colored CLI display (using ANSI escape codes)
 
 ---
 
-## 🛠️ Teknologi
+## 🛠️ Tech Stack
 
 * Python 3.14
 * Command Line Interface (CLI)
 
 ---
 
-## ▶️ Cara Menjalankan
+## ▶️ How to Run
 
-1. Pastikan Python sudah terinstall di komputer
+1. Ensure Python is installed on your computer.
 
 2. Clone repository:
 
@@ -38,13 +38,13 @@ Program kalkulator sederhana berbasis **Python (Command Line Interface)** untuk 
    git clone https://github.com/CountryIna/basic_calculator.git
    ```
 
-3. Masuk ke folder project:
+3. Navigate to the project folder:
 
    ```bash
    cd basic_calculator
    ```
 
-4. Jalankan program:
+4. Run the program:
 
    ```bash
    python calculator.py
@@ -52,67 +52,54 @@ Program kalkulator sederhana berbasis **Python (Command Line Interface)** untuk 
 
 ---
 
-## 💻 Contoh Output
+## 💻 Output Example
 
-```
- == BASIC CALCULATOR == 
+ Here is an example of the program output when run in the terminal:
 
- Pilih Operator 
-1. ➕ Tambah
-2. ➖ Kurang
-3. ✖ Kali
-4. ➗ Bagi
-0. Keluar
-Input Menu (1/2/3/4/0) : 1
-Masukkan Angka Pertama : 10
-Masukkan Angka Kedua : 190
-
- ======== HASIL ========
-10.0 + 190.0 = 200.0
-```
+![Hasil Program](hasil_calculator.png)
 
 ---
 
-## ⚠️ Catatan Penting
+## ⚠️ Important Notes
 
-* Gunakan **titik (.)** untuk bilangan desimal
-  ✔ Contoh: `3.5`
-  ❌ Salah: `3,5`
+* Use a **dote (.)** for decimal numbers
+  ✔ Example: `3.5`
+  ❌ Incorrect: `3,5`
 
-* Input selain angka akan ditolak oleh program
+* Any input orther than numbers will be rejected by the program
 
 ---
 
-## 📚 Tujuan Project
+## 📚 Project Objectives
 
-Project ini dibuat untuk:
-* Belajar dasar Python
-* Memahami konsep:
+This project was created to:
+* Learn Python basics
+* Understand core concepts:
   * Input & Output
-  * Percabangan (`if-else`)
-  * Perulangan (`while`)
+  * Conditional Statements (`if-else`)
+  * Loops (`while`)
   * Error handling (`try-except`)
-* Melatih logika pemrograman dasar
+* Practice fundamental programming logic
 
 ---
 
-## 🚀 Pengembangan Selanjutnya
+## 🚀 Future Improvements
 
-Beberapa ide pengembangan:
-* Menambahkan riwayat perhitungan
-* Mendukung lebih dari 2 angka
-* Mengubah menjadi kalkulator berbasis web
+Ideas for further development:
+* Adding calculation history
+* Supporting more than 2 numbers
+* Converting into a web-based calculator
 
 ---
 
-## 🤝 Kontribusi
+## 🤝 Contrubution
 
-Kontribusi terbuka untuk siapa saja. Silakan fork repository ini dan kembangkan sesuai kebutuhan.
+Contributions are welcome! Feel free to fork this repository and enhance it as needed.
 
 ---
 
 ## 👨‍💻 Author
 
-Dibuat oleh **[Country Ina]**
+Created by **[Country Ina]**
 
 ---
